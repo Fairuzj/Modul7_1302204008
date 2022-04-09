@@ -12,8 +12,7 @@ namespace Modul7_1302204008
     {
         public dynamic ReadJson()
         {
-            string direct = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string jString = File.ReadAllText(direct+"/bank_transfer_config.json");
+            string jString = File.ReadAllText("C:/Users/User/source/repos/Modul7_1302204008/Modul7_1302204008/bank_transfer_config.json");
             dynamic data= JsonConvert.DeserializeObject(jString);
             return data;
         }
